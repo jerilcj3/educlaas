@@ -21,5 +21,5 @@ export default async function handler(req, res) {
   const response = await client.contacts.list({ search: `ip: ${detectedIp}` })
   const contactFields = Object.values(response.data.contacts)[0].fields  
   res.status(200).json({ title: contactFields.all.title, firstname: contactFields.all.firstname, email: contactFields.all.email, phone: contactFields.all.phone, country: contactFields.all.country  }) */
-  res.status(200).json({ name: 'John Does' })
+  res.status(200).json({ name: requestIp.getClientIp(req)  })
 }
