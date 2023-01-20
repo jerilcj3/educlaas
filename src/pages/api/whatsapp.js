@@ -1,4 +1,28 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+/* 
+  This api is for sending whatsapp messages through infobip.
+  This api url is called from mautic as follows
+
+  API URL: https://educlaas.vercel.app/api/whatsapp
+
+Headers:
+    
+   Access-Control-Request-Method: POST
+  Content-Type: application/json
+   api_key: 2370252079acbf76393e0ac9ecae3b68-cd457cb9-36bb-471c-96f2-f1cd03203f96
+
+
+{
+    "sending_from": "6585333727",                                     // this is the registered phone number.
+    "sending_to": "918754747960",                                     // the number of the person captured in the form 
+    "template_name": "test2",                                              // the name of the template that you have created in infobip   
+    "placeholder_one": "Jose",                                             //placeholder 1, this is a dynamic value that you need to pass from mautic to infobip
+    "placeholder_two": "educlaas2",                                    //placeholder 2, this is a dynamic value that you need to pass from mautic to infobip 
+    "language": "en_GB"                                                      //this refers to the template language that you created in infobip
+}
+
+
+
+*/
 
 export default async function handler(req, res) {
 
