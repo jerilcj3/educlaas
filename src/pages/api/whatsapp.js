@@ -8,7 +8,7 @@ Headers:
     
    Access-Control-Request-Method: POST
   Content-Type: application/json
-   api_key: 2370252079acbf76393e0ac9ecae3b68-cd457cb9-36bb-471c-96f2-f1cd03203f96
+   api_key: <provide API KEY HERE>
 
 
 {
