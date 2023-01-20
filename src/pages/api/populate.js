@@ -17,7 +17,7 @@ const client = new Mautic({
 
 
 export default async function handler(req, res) {
-  const detectedIp = requestIp.getClientIp(req)  
+  const detectedIp = '121.6.12.84' 
   const response = await client.contacts.list({ search: `ip: ${detectedIp}` })
   const contactFields = Object.values(response.data.contacts)[0].fields  
   res.status(200).json({ title: contactFields.all.title, firstname: contactFields.all.firstname, email: contactFields.all.email, phone: contactFields.all.phone, country: contactFields.all.country  })
